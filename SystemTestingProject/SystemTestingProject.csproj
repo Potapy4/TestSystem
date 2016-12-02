@@ -150,6 +150,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProgramLogic\ProgramLogic.csproj">
+      <Project>{54bf43cf-adc3-48a9-9a3a-1caed95c4b4f}</Project>
+      <Name>ProgramLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
