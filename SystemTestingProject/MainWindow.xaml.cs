@@ -27,12 +27,12 @@ namespace SystemTestingProject
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            new RegistrationWindow().ShowDialog();
+            new RegistrationWindow().Show();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            new TestingWindow().ShowDialog();
+            new TestingWindow().Show();
         }
     }
 }

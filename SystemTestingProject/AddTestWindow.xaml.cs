@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace SystemTestingProject
 {
     /// <summary>
-    /// Interaction logic for TestingWindow.xaml
+    /// Interaction logic for AddTestWindow.xaml
     /// </summary>
-    public partial class TestingWindow : Window
+    public partial class AddTestWindow : Window
     {
-        public TestingWindow()
+        public AddTestWindow()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            new AddAdminWindow().Show();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            new AddTestWindow().Show();
         }
     }
 }
