@@ -4,6 +4,7 @@ namespace ProgramLogic
 {
     public class User
     {
+        public int UserId { get; set; }
         public string Firstname { get; private set; }
         public string Lastname { get; private set; }
         public string Username { get; private set; }
@@ -12,10 +13,10 @@ namespace ProgramLogic
         public string Sex { get; private set; }
         public string Email { get; private set; }
         public string PhoneNumber { get; private set; }
-        public string Password { get; private set; }        
-        private bool isAdmin;
+        public string Password { get; private set; }
+        public bool isAdmin { get; private set; }
 
-        public User(string Firstname, string Lastname, string Username, DateTime Date, string City, string Sex, string Email, string PhoneNumber, string Password, bool isAdmin=false)
+        public User(string Firstname, string Lastname, string Username, DateTime Date, string City, string Sex, string Email, string PhoneNumber, string Password, bool isAdmin = false)
         {
             this.Firstname = Firstname;
             this.Lastname = Lastname;
