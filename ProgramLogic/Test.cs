@@ -1,21 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace ProgramLogic
 {
     public class Test
     {
-        public static int TestID { get; private set; }
-        public List<Question> Questions = new List<Question>();
+        public int TestID { get; private set; }
         public string TestName { get; private set; }
+        public List<Question> Questions = new List<Question>();
 
-        public Test(string TestName)
-        {
-            ++TestID;
+        public Test(string TestName, int TestID)
+        {           
             this.TestName = TestName;
-        }
-        public void InitializeTestID(int id)
-        {
-            TestID = id;
-        }
+            this.TestID = TestID;
+        }        
     }
 }
