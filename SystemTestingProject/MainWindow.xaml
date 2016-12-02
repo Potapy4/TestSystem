@@ -10,9 +10,16 @@
         MinWidth="250"
         WindowStartupLocation="CenterScreen">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Grid >        
 =======
     <Grid >
+>>>>>>> refs/remotes/origin/Roman
+=======
+    <Grid >
+=======
+    <Grid >        
+>>>>>>> refs/remotes/origin/master
 >>>>>>> refs/remotes/origin/Roman
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid>
