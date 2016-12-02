@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramLogic", "ProgramLogic\ProgramLogic.csproj", "{54BF43CF-ADC3-48A9-9A3A-1CAED95C4B4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemTestingProject", "..\..\Documents\Visual Studio 2015\Projects\SystemTestingProject\SystemTestingProject\SystemTestingProject.csproj", "{4AE25ADD-72CC-4777-9A98-B166B18D384B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemTestingProject", "SystemTestingProject\SystemTestingProject.csproj", "{4AE25ADD-72CC-4777-9A98-B166B18D384B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
