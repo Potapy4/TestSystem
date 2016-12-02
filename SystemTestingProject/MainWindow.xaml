@@ -9,10 +9,7 @@
         MinHeight="180"
         MinWidth="250"
         WindowStartupLocation="CenterScreen">
-    <Grid >
-        <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\User\Desktop\images (1).jpg"/>
-        </Grid.Background>
+    <Grid >        
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
