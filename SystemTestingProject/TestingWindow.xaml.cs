@@ -19,24 +19,65 @@ namespace SystemTestingProject
     /// </summary>
     public partial class TestingWindow : Window
     {
-        public TestingWindow()
+        string login;
+        public TestingWindow(string admin, string login)
         {
             InitializeComponent();
+            this.login = login;
+            var gridView = new GridView();
+            this.listView.View = gridView;
+            gridView.Columns.Add(new GridViewColumn
+            {
+                Header = "Name",
+                DisplayMemberBinding = new Binding("Name"),
+                Width = 100
+            });
+            gridView.Columns.Add(new GridViewColumn
+            {
+                Header = "Result",
+                DisplayMemberBinding = new Binding("Result"),
+                Width = 100
+            });
+
+
+            if (admin=="Admin")
+            {
+                button.IsEnabled = true;
+                button1.IsEnabled = true;
+            }
+            UpdateListView();
+        }
+
+        public void UpdateListView()
+        {
+            listView.Items.Clear();
+            ProgramLogic.JSONHelper json = new ProgramLogic.JSONHelper();
+            foreach (var item in json.Tests)
+            {
+                listView.Items.Add(new {Name = item.TestName, Result = ResultExamp.GetResult(item.TestName, login) });
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            new AddAdminWindow().Show();
+            new AddAdminWindow().ShowDialog();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            new AddTestWindow().Show();
+            new AddTestWindow().ShowDialog();
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            new QuestionAnswerWindow().Show();
+            ProgramLogic.JSONHelper json = new ProgramLogic.JSONHelper();
+            new QuestionAnswerWindow(json.Tests[listView.SelectedIndex], login).ShowDialog();
+            UpdateListView();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

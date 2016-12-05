@@ -9,7 +9,7 @@
         MinHeight="180"
         MinWidth="250"
         WindowStartupLocation="CenterScreen">
-    <Grid >        
+    <Grid >
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
