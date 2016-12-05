@@ -26,7 +26,23 @@ namespace SystemTestingProject
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                string male = "";
+                if (MaleRadioButton.IsSealed == true)
+                    male = "Male";
+                else
+                    male = "Female";
+                Connect db = new Connect();
+                db.Users.Add(new User() { Username = UserNameTextBox.Text, Sex = male, City = CityTextBox.Text, Date = BirthDayDatePicker.SelectedDate.Value, Firstname = FirstNameTextBox.Text, Lastname = LastNameTextBox.Text, Password = PasswordTextBox.Password, Email = EmailTextBox.Text, PhoneNumber = "", isAdmin = false });
 
+                db.SaveChanges();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

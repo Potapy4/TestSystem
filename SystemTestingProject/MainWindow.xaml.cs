@@ -27,12 +27,37 @@ namespace SystemTestingProject
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            new RegistrationWindow().Show();
+            RegistrationWindow reg=new RegistrationWindow();
+            reg.ShowDialog();
+            textBox.Text = reg.UserNameTextBox.Text;
+            passwordBox.Password = reg.PasswordTextBox.Password;
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            new TestingWindow().Show();
+            bool corect = false;
+            string admin = null;
+            Connect db = new Connect();
+            foreach (var item in db.Users.ToArray())
+            {
+                if(item.Username==textBox.Text)
+                {
+                    if(item.Password==passwordBox.Password)
+                    {
+                        corect = true;
+                        if (item.isAdmin == true)
+                            admin = "Admin";
+                        break;
+                    }
+                }
+            }
+            if (corect == true)
+            {
+                new TestingWindow(admin, textBox.Text).Show();
+                this.Close();
+            }
+            else
+                MessageBox.Show("Not Corect Data");
         }
     }
 }
