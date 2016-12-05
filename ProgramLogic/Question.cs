@@ -3,6 +3,7 @@
     public class Question
     {
         private const int maxChoices = 4;
+        //public string rightAnswer { get; set; }
         public string Text { get; set; }
         public string[] AnswerChoices = new string[maxChoices];
         public int AnswerId { get; set; }
