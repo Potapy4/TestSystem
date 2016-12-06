@@ -25,6 +25,7 @@ namespace SystemTestingProject
             InitializeComponent();
         }
 
+        ///Кнопка призначена для реєстрації
         private void button_Click(object sender, RoutedEventArgs e)
         {
             RegistrationWindow reg=new RegistrationWindow();
@@ -33,6 +34,7 @@ namespace SystemTestingProject
             passwordBox.Password = reg.PasswordTextBox.Password;
         }
 
+        ///Кнопка призначена для входу
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             bool corect = false;

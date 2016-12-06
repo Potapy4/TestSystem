@@ -28,6 +28,7 @@ namespace SystemTestingProject
             UpdateComboBox();
         }
 
+        /// Метод для обновлення юзерів
         public void UpdateComboBox()
         {
             comboBox.Items.Clear();
@@ -37,12 +38,13 @@ namespace SystemTestingProject
                     comboBox.Items.Add(item.Username);
             }
         }
-
+        
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
 
+        /// Кнопка для призначення вибраного юзера адіністратором
         private void button_Click(object sender, RoutedEventArgs e)
         {
             foreach (var item in users)
