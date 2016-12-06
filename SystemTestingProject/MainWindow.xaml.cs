@@ -14,10 +14,12 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SystemTestingProject
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+{ 
+    /*!
+	\author Скеба Роман, Потапенко Микита, Шалагінов Андрій
+	\version 1.0
+	\date 06.12.2016
+    */
     public partial class MainWindow : Window
     {
         public MainWindow()
