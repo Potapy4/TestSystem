@@ -27,10 +27,10 @@ namespace SystemTestingProject
 
         private bool IsValidUsername(string Nickname)
         {
-            return reg.IsMatch(Nickname);
+            return Regex.IsMatch(Nickname, @"^[a-zA-Z][a-zA-Z0-9]{3,11}$");
         }
 
-        public static bool IsValidEmail(string email)
+        public bool IsValidEmail(string email)
         {
             return Regex.IsMatch(email, @"\A[a-z0-9]+([-._][a-z0-9]+)*@([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,4}\z")
                 && Regex.IsMatch(email, @"^(?=.{1,64}@.{4,64}$)(?=.{6,100}$).*");
