@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,9 +25,31 @@ namespace SystemTestingProject
             InitializeComponent();
         }
 
+        private bool IsValidUsername(string Nickname)
+        {
+            return reg.IsMatch(Nickname);
+        }
+
+        public static bool IsValidEmail(string email)
+        {
+            return Regex.IsMatch(email, @"\A[a-z0-9]+([-._][a-z0-9]+)*@([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,4}\z")
+                && Regex.IsMatch(email, @"^(?=.{1,64}@.{4,64}$)(?=.{6,100}$).*");
+        }
+
         ///Метод для для добавлення юзера в базу даних
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            if (!IsValidUsername(UserNameTextBox.Text))
+            {
+                MessageBox.Show("Incorrect username. Please try to use antoher username!");
+                return;
+            }
+            if (!IsValidEmail(EmailTextBox.Text))
+            {
+                MessageBox.Show("Incorrect email adress!");
+                return;
+            }
+
             try
             {
                 string male = "";
