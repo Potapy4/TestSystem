@@ -17,6 +17,7 @@ namespace SystemTestingProject
     /// <summary>
     /// Interaction logic for TestingWindow.xaml
     /// </summary>
+    ///
     public partial class TestingWindow : Window
     {
         string login;
@@ -47,7 +48,8 @@ namespace SystemTestingProject
             }
             UpdateListView();
         }
-
+        
+        ///Метод для оновлення Ліста зі всіма тестами
         public void UpdateListView()
         {
             listView.Items.Clear();
@@ -68,11 +70,15 @@ namespace SystemTestingProject
             new AddTestWindow().ShowDialog();
         }
 
+        ///Кнопка для старту вибраного тесту 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            ProgramLogic.JSONHelper json = new ProgramLogic.JSONHelper();
-            new QuestionAnswerWindow(json.Tests[listView.SelectedIndex], login).ShowDialog();
-            UpdateListView();
+            if (listView.SelectedIndex != -1)
+            {
+                ProgramLogic.JSONHelper json = new ProgramLogic.JSONHelper();
+                new QuestionAnswerWindow(json.Tests[listView.SelectedIndex], login).ShowDialog();
+                UpdateListView();
+            }
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)

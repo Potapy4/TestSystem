@@ -24,6 +24,7 @@ namespace SystemTestingProject
             InitializeComponent();
         }
 
+        ///Метод для для добавлення юзера в базу даних
         private void button_Click(object sender, RoutedEventArgs e)
         {
             try

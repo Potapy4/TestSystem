@@ -43,6 +43,7 @@ namespace SystemTestingProject
             radioButton4.Content = test.Questions[position].AnswerChoices[3];
         }
 
+        ///Кнопка для поверненнення до попереднього питання 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             if (position - 1 >= 0)
@@ -68,6 +69,7 @@ namespace SystemTestingProject
             }
         }
 
+        ///Кнопка для переходу до наступного питання і якщо це останнє питання, завершення тесту.
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             if (position + 2 == test.Questions.Count)
