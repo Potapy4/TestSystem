@@ -25,9 +25,9 @@ namespace SystemTestingProject
             InitializeComponent();
         }
 
-        private bool IsValidUsername(string Nickname)
+        private bool IsValidUsername(string username)
         {
-            return Regex.IsMatch(Nickname, @"^[a-zA-Z][a-zA-Z0-9]{3,11}$");
+            return Regex.IsMatch(username, @"^[a-zA-Z][a-zA-Z0-9]{3,11}$");
         }
 
         public bool IsValidEmail(string email)
