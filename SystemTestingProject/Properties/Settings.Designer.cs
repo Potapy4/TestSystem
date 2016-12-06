@@ -26,8 +26,8 @@ namespace SystemTestingProject.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WIN-GOR2E5FSPLP\\SQLEXPRESS;Initial Catalog=TestSystem;Integrated Secu" +
-            "rity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=310-5;Initial Catalog=TestSystem;Persist Security Info=True;User ID=s" +
+            "a;Password=1")]
         public string Setting {
             get {
                 return ((string)(this["Setting"]));

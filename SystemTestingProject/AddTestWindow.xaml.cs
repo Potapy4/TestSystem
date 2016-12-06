@@ -40,6 +40,7 @@ namespace SystemTestingProject
             });
         }
 
+        /// Кнопка для добавлення питання в тест
         private void button_Click(object sender, RoutedEventArgs e)
         {
             test.Questions.Add(new ProgramLogic.Question { Text = textBox5.Text, AnswerId = 0,
@@ -48,6 +49,7 @@ namespace SystemTestingProject
             textBox5.Text = textBox4.Text = textBox3.Text = textBox2.Text = textBox1.Text = string.Empty;
         }
 
+        /// Кнопка для добавлення тесту
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             test.TestName = textBox.Text;
