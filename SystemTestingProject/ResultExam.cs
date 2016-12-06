@@ -18,7 +18,18 @@ namespace SystemTestingProject
     }
     public static class ResultExamp
     {
-       public static int GetResult(string NameExam,string loginUser)
+         /*!
+         Находить в базіданих результат екзамену
+           \param NameExam-назва екзамену,loginUser -логін користувача
+           \return результат екзамену вказаного користувача
+        */
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="NameExam"></param>
+        /// <param name="loginUser"></param>
+        /// <returns></returns>
+        public static int GetResult(string NameExam,string loginUser)
         {
             Connect db = new Connect();
             int a = 0;
@@ -38,6 +49,12 @@ namespace SystemTestingProject
             }
             return a;
         }
+         /*!
+         Встановлює результат Екзамену в Базы Даних
+         \param NameExam -назва екзамену
+         \param loginUser -логын користувача
+         \param Result -результат Екзамену
+         */
         public static void SetExampResult(string NameExam,string loginUser,int Result)
         {
             Connect db = new Connect();
